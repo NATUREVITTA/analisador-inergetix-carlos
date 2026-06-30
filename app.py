@@ -18,9 +18,9 @@ except Exception as e:
 CAMINHO_LOGO = "logo.png" 
 ARQUIVO_HISTORICO = "historico_analises.txt"
 ENDERECO_FIXO = "Atendimento On-line"
-INSTA_FIXO = "@beatriz_tiradentes_psi"
-ZAP_FIXO = "34 99789-3333"
-NOME_TERAPEUTA_FIXO = "Psicologa Beatriz Tiradente de Lima"
+INSTA_FIXO = "@psicarlosruffino"
+ZAP_FIXO = "62 98159-8742"
+NOME_TERAPEUTA_FIXO = "Carlos Ruffino"
 
 # --- FUNÇÕES DE PERSISTÊNCIA ---
 def salvar_no_historico(nome_paciente):
@@ -96,7 +96,7 @@ def gerar_pdf(texto_analise, dados_usuario, nome_terapeuta, info_rodape):
     pdf.set_font("Arial", "B", 11)
     pdf.cell(0, 8, txt=nome_terapeuta, ln=True, align='R')
     pdf.set_font("Arial", "I", 10)
-    pdf.cell(0, 8, txt="Psicologia Clínica", ln=True, align='R')
+    pdf.cell(0, 8, txt="Psicoterapeuta", ln=True, align='R')
     
     return pdf.output(dest='S').encode('latin-1', 'replace')
 
@@ -131,7 +131,7 @@ with st.sidebar:
     tel = st.text_input("WhatsApp", ZAP_FIXO)
 
 # ÁREA PRINCIPAL
-st.title("🌿 Portal Psicologa Beatriz Tiradentes de Lima")
+st.title("🌿 Portal Psicoterapeuta Carlos Ruffino")
 
 col1, col2 = st.columns(2)
 with col1:
@@ -171,7 +171,7 @@ if gerar:
                 
                 prompt_final = f"""
 
-                Você é uma Psicologa clinica e Consultora doTERRA, com vasta experiência prática em:
+                Você é um psicoterapeuta transpessoal, corporal da Análise bioenergética e Consultor doTERRA, com vasta experiência prática em:
 
                     - Saúde física, emocional, energética e espiritual
                     - Saúde preventiva
@@ -191,7 +191,7 @@ if gerar:
                     - A análise NÃO é diagnóstico médico.
                     - Trabalhe com interpretação integrativa, emocional, energética e metafisica
                     - Utilize linguagem acolhedora, humanizada e profissional.
-                    - Escreva como consultora experiente, com segurança técnica e sensibilidade.
+                    - Escreva como consultor experiente, com segurança técnica e sensibilidade.
 
                     -------------------------------------------------------
 
